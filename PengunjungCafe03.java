@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class PengunjungCafe03 {
 
-    void daftarPengunjung(String... namaPengunjung) {
+    static void daftarPengunjung(String... namaPengunjung) {
         for (String nama : namaPengunjung) {
             System.out.println(nama);
         }
     }
-    
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
