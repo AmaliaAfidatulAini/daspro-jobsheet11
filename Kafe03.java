@@ -31,25 +31,20 @@ public class Kafe03 {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        //Memanggil fungsi Menu()
         Menu("Budi", true, "DISKON30");
 
-        //Meminta input user
         System.out.print("Masukkan nomor menu: ");
-        int pilihanMenu = input.nextInt();
+        int pilihanMenu = sc.nextInt();
 
-        System.out.print("Masukkan jumlah porsi: ");
-        int banyakItem = input.nextInt();
+        System.out.print("Masukkan jumlah item: ");
+        int banyakItem = sc.nextInt();
 
-        // Memanggil fungsi hitungTotalHarga()
-        int totalBayar = hitungTotalHarga(pilihanMenu, banyakItem);
+        int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem);
 
-        // Menampilkan hasil total bayar
-        System.out.println("Total pembayaran: Rp " + totalBayar);
+        System.out.println("Total harga untuk pesanan anda : Rp " + totalHarga);
 
-        input.close();
     }
 
     public static int hitungTotalHarga(int pilihanMenu, int banyakItem) {
