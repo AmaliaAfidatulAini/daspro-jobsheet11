@@ -30,15 +30,33 @@ public class Kafe03 {
     }
 
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        //Memanggil fungsi Menu()
         Menu("Budi", true, "DISKON30");
 
+        //Meminta input user
+        System.out.print("Masukkan nomor menu: ");
+        int pilihanMenu = input.nextInt();
+
+        System.out.print("Masukkan jumlah porsi: ");
+        int banyakItem = input.nextInt();
+
+        // Memanggil fungsi hitungTotalHarga()
+        int totalBayar = hitungTotalHarga(pilihanMenu, banyakItem);
+
+        // Menampilkan hasil total bayar
+        System.out.println("Total pembayaran: Rp " + totalBayar);
+
+        input.close();
     }
 
     public static int hitungTotalHarga(int pilihanMenu, int banyakItem) {
         int[] hargaItems = { 15000, 20000, 22000, 12000, 10000, 18000 };
 
         int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
-        return hargaTotal;
+
+        return hargaTotal; 
     }
-    
 }
