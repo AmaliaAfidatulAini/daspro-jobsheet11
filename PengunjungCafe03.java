@@ -2,10 +2,9 @@ import java.util.Scanner;
 
 public class PengunjungCafe03 {
 
-    public static void daftarPengunjung(String... namaPengunjung) {
-        System.out.println("Daftar Nama Pengunjung:");
-        for (int i = 0; i < namaPengunjung.length; i++) {
-            System.out.println("- " + namaPengunjung[i]);
+    void daftarPengunjung(String... namaPengunjung) {
+        for (String nama : namaPengunjung) {
+            System.out.println(nama);
         }
     }
     
